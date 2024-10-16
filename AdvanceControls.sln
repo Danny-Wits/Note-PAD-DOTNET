@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdvanceControls", "AdvanceControls\AdvanceControls.vbproj", "{9CE4CB39-C605-4DF0-AF69-191C43F996E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE4CB39-C605-4DF0-AF69-191C43F996E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE4CB39-C605-4DF0-AF69-191C43F996E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE4CB39-C605-4DF0-AF69-191C43F996E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE4CB39-C605-4DF0-AF69-191C43F996E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DEF3021-8FF5-45CF-BECB-4DDC0BDA1D37}
+	EndGlobalSection
+EndGlobal
