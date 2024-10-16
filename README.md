@@ -32,7 +32,12 @@ Notepad.NET is a simple yet effective text editing application developed using V
 - Launch the application.
 - Use the buttons to change the text size, color, or font as needed.
 - Start typing in the text area to create or edit your notes.
-- Save your notes as needed (implementation of the save feature may be added in future versions).
+- Save your notes as needed .
+
+## What is next (in Future Updates)
+- Going to add tab support
+- ...
+  
 
 ## Contributions
 
