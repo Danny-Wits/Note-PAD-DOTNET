@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class NoteWindow
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NoteWindow))
         companyLink = New LinkLabel()
         RTB1 = New RichTextBox()
         ColorDialog1 = New ColorDialog()
@@ -34,25 +34,25 @@ Partial Class Form1
         GitLink = New LinkLabel()
         MenuS = New MenuStrip()
         FileMenu = New ToolStripMenuItem()
-        ToolStripMenuItem2 = New ToolStripMenuItem()
-        ToolStripMenuItem3 = New ToolStripMenuItem()
-        ToolStripMenuItem4 = New ToolStripMenuItem()
-        OpenToolStripMenuItem = New ToolStripMenuItem()
+        newFile = New ToolStripMenuItem()
+        SaveFile = New ToolStripMenuItem()
+        SaveAsFile = New ToolStripMenuItem()
+        OpenFile = New ToolStripMenuItem()
         EditToolStripMenuItem = New ToolStripMenuItem()
-        ToolStripMenuItem5 = New ToolStripMenuItem()
-        ToolStripMenuItem6 = New ToolStripMenuItem()
-        ToolStripMenuItem7 = New ToolStripMenuItem()
-        ToolStripMenuItem8 = New ToolStripMenuItem()
-        BoldToolStripMenuItem = New ToolStripMenuItem()
-        ItalicsToolStripMenuItem = New ToolStripMenuItem()
-        SizeUpToolStripMenuItem = New ToolStripMenuItem()
-        SizeDownToolStripMenuItem = New ToolStripMenuItem()
+        undoEdit = New ToolStripMenuItem()
+        RedoEdit = New ToolStripMenuItem()
+        ChangeColorEdit = New ToolStripMenuItem()
+        ChangeFontEdit = New ToolStripMenuItem()
+        SizeUpEdit = New ToolStripMenuItem()
+        SizeDownEdit = New ToolStripMenuItem()
         AboutToolStripMenuItem = New ToolStripMenuItem()
-        ToolStripMenuItem9 = New ToolStripMenuItem()
-        ToolStripMenuItem10 = New ToolStripMenuItem()
-        ToolStripMenuItem11 = New ToolStripMenuItem()
-        sizeUpbtn = New Button()
+        VersionAbout = New ToolStripMenuItem()
+        CreaterAbout = New ToolStripMenuItem()
+        SponserAbout = New ToolStripMenuItem()
+        sizeUpBtn = New Button()
         sizeDownBtn = New Button()
+        SaveFileDialog1 = New SaveFileDialog()
+        OpenFileDialog1 = New OpenFileDialog()
         MenuS.SuspendLayout()
         SuspendLayout()
         ' 
@@ -134,126 +134,114 @@ Partial Class Form1
         ' 
         ' FileMenu
         ' 
-        FileMenu.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, ToolStripMenuItem4, OpenToolStripMenuItem})
+        FileMenu.DropDownItems.AddRange(New ToolStripItem() {newFile, SaveFile, SaveAsFile, OpenFile})
         FileMenu.Name = "FileMenu"
         FileMenu.Size = New Size(46, 24)
         FileMenu.Text = "File"
         ' 
-        ' ToolStripMenuItem2
+        ' newFile
         ' 
-        ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        ToolStripMenuItem2.Size = New Size(143, 26)
-        ToolStripMenuItem2.Text = "New"
+        newFile.Name = "newFile"
+        newFile.Size = New Size(143, 26)
+        newFile.Text = "New"
         ' 
-        ' ToolStripMenuItem3
+        ' SaveFile
         ' 
-        ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        ToolStripMenuItem3.Size = New Size(143, 26)
-        ToolStripMenuItem3.Text = "Save"
+        SaveFile.Name = "SaveFile"
+        SaveFile.Size = New Size(143, 26)
+        SaveFile.Text = "Save"
         ' 
-        ' ToolStripMenuItem4
+        ' SaveAsFile
         ' 
-        ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        ToolStripMenuItem4.Size = New Size(143, 26)
-        ToolStripMenuItem4.Text = "Save As"
+        SaveAsFile.Name = "SaveAsFile"
+        SaveAsFile.Size = New Size(143, 26)
+        SaveAsFile.Text = "Save As"
         ' 
-        ' OpenToolStripMenuItem
+        ' OpenFile
         ' 
-        OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        OpenToolStripMenuItem.Size = New Size(143, 26)
-        OpenToolStripMenuItem.Text = "Open"
+        OpenFile.Name = "OpenFile"
+        OpenFile.Size = New Size(143, 26)
+        OpenFile.Text = "Open"
         ' 
         ' EditToolStripMenuItem
         ' 
-        EditToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem5, ToolStripMenuItem6, ToolStripMenuItem7, ToolStripMenuItem8, BoldToolStripMenuItem, ItalicsToolStripMenuItem, SizeUpToolStripMenuItem, SizeDownToolStripMenuItem})
+        EditToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {undoEdit, RedoEdit, ChangeColorEdit, ChangeFontEdit, SizeUpEdit, SizeDownEdit})
         EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         EditToolStripMenuItem.Size = New Size(49, 24)
         EditToolStripMenuItem.Text = "Edit"
         ' 
-        ' ToolStripMenuItem5
+        ' undoEdit
         ' 
-        ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        ToolStripMenuItem5.Size = New Size(182, 26)
-        ToolStripMenuItem5.Text = "Undo"
+        undoEdit.Name = "undoEdit"
+        undoEdit.Size = New Size(182, 26)
+        undoEdit.Text = "Undo"
         ' 
-        ' ToolStripMenuItem6
+        ' RedoEdit
         ' 
-        ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        ToolStripMenuItem6.Size = New Size(182, 26)
-        ToolStripMenuItem6.Text = "Redo"
+        RedoEdit.Name = "RedoEdit"
+        RedoEdit.Size = New Size(182, 26)
+        RedoEdit.Text = "Redo"
         ' 
-        ' ToolStripMenuItem7
+        ' ChangeColorEdit
         ' 
-        ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        ToolStripMenuItem7.Size = New Size(182, 26)
-        ToolStripMenuItem7.Text = "Change Color"
+        ChangeColorEdit.Name = "ChangeColorEdit"
+        ChangeColorEdit.Size = New Size(182, 26)
+        ChangeColorEdit.Text = "Change Color"
         ' 
-        ' ToolStripMenuItem8
+        ' ChangeFontEdit
         ' 
-        ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        ToolStripMenuItem8.Size = New Size(182, 26)
-        ToolStripMenuItem8.Text = "Change Font"
+        ChangeFontEdit.Name = "ChangeFontEdit"
+        ChangeFontEdit.Size = New Size(182, 26)
+        ChangeFontEdit.Text = "Change Font"
         ' 
-        ' BoldToolStripMenuItem
+        ' SizeUpEdit
         ' 
-        BoldToolStripMenuItem.Name = "BoldToolStripMenuItem"
-        BoldToolStripMenuItem.Size = New Size(182, 26)
-        BoldToolStripMenuItem.Text = "Bold"
+        SizeUpEdit.Name = "SizeUpEdit"
+        SizeUpEdit.Size = New Size(182, 26)
+        SizeUpEdit.Text = "Size up"
         ' 
-        ' ItalicsToolStripMenuItem
+        ' SizeDownEdit
         ' 
-        ItalicsToolStripMenuItem.Name = "ItalicsToolStripMenuItem"
-        ItalicsToolStripMenuItem.Size = New Size(182, 26)
-        ItalicsToolStripMenuItem.Text = "Italics"
-        ' 
-        ' SizeUpToolStripMenuItem
-        ' 
-        SizeUpToolStripMenuItem.Name = "SizeUpToolStripMenuItem"
-        SizeUpToolStripMenuItem.Size = New Size(182, 26)
-        SizeUpToolStripMenuItem.Text = "Size up"
-        ' 
-        ' SizeDownToolStripMenuItem
-        ' 
-        SizeDownToolStripMenuItem.Name = "SizeDownToolStripMenuItem"
-        SizeDownToolStripMenuItem.Size = New Size(182, 26)
-        SizeDownToolStripMenuItem.Text = "Size Down"
+        SizeDownEdit.Name = "SizeDownEdit"
+        SizeDownEdit.Size = New Size(182, 26)
+        SizeDownEdit.Text = "Size Down"
         ' 
         ' AboutToolStripMenuItem
         ' 
-        AboutToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem9, ToolStripMenuItem10, ToolStripMenuItem11})
+        AboutToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {VersionAbout, CreaterAbout, SponserAbout})
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         AboutToolStripMenuItem.Size = New Size(64, 24)
         AboutToolStripMenuItem.Text = "About"
         ' 
-        ' ToolStripMenuItem9
+        ' VersionAbout
         ' 
-        ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-        ToolStripMenuItem9.Size = New Size(145, 26)
-        ToolStripMenuItem9.Text = "Version"
+        VersionAbout.Name = "VersionAbout"
+        VersionAbout.Size = New Size(145, 26)
+        VersionAbout.Text = "Version"
         ' 
-        ' ToolStripMenuItem10
+        ' CreaterAbout
         ' 
-        ToolStripMenuItem10.Name = "ToolStripMenuItem10"
-        ToolStripMenuItem10.Size = New Size(145, 26)
-        ToolStripMenuItem10.Text = "Creater"
+        CreaterAbout.Name = "CreaterAbout"
+        CreaterAbout.Size = New Size(145, 26)
+        CreaterAbout.Text = "Creater"
         ' 
-        ' ToolStripMenuItem11
+        ' SponserAbout
         ' 
-        ToolStripMenuItem11.Name = "ToolStripMenuItem11"
-        ToolStripMenuItem11.Size = New Size(145, 26)
-        ToolStripMenuItem11.Text = "Sponser"
+        SponserAbout.Name = "SponserAbout"
+        SponserAbout.Size = New Size(145, 26)
+        SponserAbout.Text = "Sponser"
         ' 
-        ' sizeUpbtn
+        ' sizeUpBtn
         ' 
-        sizeUpbtn.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        sizeUpbtn.Font = New Font("SimSun", 13.8F)
-        sizeUpbtn.Location = New Point(462, 30)
-        sizeUpbtn.Margin = New Padding(1)
-        sizeUpbtn.Name = "sizeUpbtn"
-        sizeUpbtn.Size = New Size(194, 40)
-        sizeUpbtn.TabIndex = 7
-        sizeUpbtn.Text = "Size up"
-        sizeUpbtn.UseVisualStyleBackColor = True
+        sizeUpBtn.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        sizeUpBtn.Font = New Font("SimSun", 13.8F)
+        sizeUpBtn.Location = New Point(462, 30)
+        sizeUpBtn.Margin = New Padding(1)
+        sizeUpBtn.Name = "sizeUpBtn"
+        sizeUpBtn.Size = New Size(194, 40)
+        sizeUpBtn.TabIndex = 7
+        sizeUpBtn.Text = "Size up"
+        sizeUpBtn.UseVisualStyleBackColor = True
         ' 
         ' sizeDownBtn
         ' 
@@ -267,7 +255,11 @@ Partial Class Form1
         sizeDownBtn.Text = "Size Down"
         sizeDownBtn.UseVisualStyleBackColor = True
         ' 
-        ' Form1
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
+        ' NoteWindow
         ' 
         AutoScaleDimensions = New SizeF(13F, 26F)
         AutoScaleMode = AutoScaleMode.Font
@@ -275,7 +267,7 @@ Partial Class Form1
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1086, 585)
         Controls.Add(sizeDownBtn)
-        Controls.Add(sizeUpbtn)
+        Controls.Add(sizeUpBtn)
         Controls.Add(GitLink)
         Controls.Add(changeFontBtn)
         Controls.Add(changeColorBtn)
@@ -284,9 +276,10 @@ Partial Class Form1
         Controls.Add(MenuS)
         Font = New Font("Showcard Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        KeyPreview = True
         MainMenuStrip = MenuS
         Margin = New Padding(5, 4, 5, 4)
-        Name = "Form1"
+        Name = "NoteWindow"
         StartPosition = FormStartPosition.CenterParent
         Text = "NOTE PAD .NET"
         MenuS.ResumeLayout(False)
@@ -305,24 +298,24 @@ Partial Class Form1
     Friend WithEvents GitLink As LinkLabel
     Friend WithEvents MenuS As MenuStrip
     Friend WithEvents FileMenu As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents newFile As ToolStripMenuItem
+    Friend WithEvents SaveFile As ToolStripMenuItem
+    Friend WithEvents SaveAsFile As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem7 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
+    Friend WithEvents undoEdit As ToolStripMenuItem
+    Friend WithEvents RedoEdit As ToolStripMenuItem
+    Friend WithEvents ChangeColorEdit As ToolStripMenuItem
+    Friend WithEvents ChangeFontEdit As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem10 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem11 As ToolStripMenuItem
-    Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BoldToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ItalicsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SizeUpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SizeDownToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents sizeUpbtn As Button
+    Friend WithEvents VersionAbout As ToolStripMenuItem
+    Friend WithEvents CreaterAbout As ToolStripMenuItem
+    Friend WithEvents SponserAbout As ToolStripMenuItem
+    Friend WithEvents OpenFile As ToolStripMenuItem
+    Friend WithEvents SizeUpEdit As ToolStripMenuItem
+    Friend WithEvents SizeDownEdit As ToolStripMenuItem
+    Friend WithEvents sizeUpBtn As Button
     Friend WithEvents sizeDownBtn As Button
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 
 End Class
