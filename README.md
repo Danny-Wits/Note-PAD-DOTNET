@@ -1,5 +1,5 @@
 # Notepad.NET
-![WhatsApp Image 2024-10-28 at 18 09 52_e6eb2d9a](https://github.com/user-attachments/assets/80bdfefe-65da-452c-a5f2-8ddd59d11dc2)
+
 
 ![image](https://github.com/user-attachments/assets/643a9594-3cec-4112-80ce-eb6bbeba9a2c)
 
